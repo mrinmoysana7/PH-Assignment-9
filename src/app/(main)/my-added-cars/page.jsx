@@ -12,6 +12,7 @@ import {
 
 const MyAddedCarsPage = async () => {
   const res = await fetch("http://localhost:5000/added-cars");
+
   
   const addedCars = await res.json();
 
