@@ -76,13 +76,13 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="flex gap-5 items-center">
+        <div className="flex gap-1 items-center">
           <div>
-            <Car className="w-8 md:w-10 h-8 md:h-10"></Car>
+            <Car className="w-8 md:w-10 h-8 md:h-10" color="orange"></Car>
           </div>
           <Link
             href="/"
-            className="font-bold text-blue-400 text-2xl md:text-4xl"
+            className="font-bold text-blue-500 text-2xl md:text-4xl"
           >
             DriveFleet
           </Link>
@@ -118,7 +118,7 @@ const Navbar = () => {
         ) : user ? (
           <div className="flex items-center gap-3">
             <div className="text-right leading-tight">
-              <p className="text-sm font-semibold truncate max-w-30">
+              <p className="hidden md:flex text-sm font-semibold truncate max-w-30">
                 Hi, {user.name}
               </p>
             </div>

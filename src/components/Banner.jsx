@@ -1,12 +1,12 @@
 import { ArrowUpRight } from "@gravity-ui/icons";
-import { Button, Separator } from "@heroui/react";
+import { Button } from "@heroui/react";
 import Link from "next/link";
 import React from "react";
 
 const Banner = () => {
   return (
-    <div className="min-h-screen bg-blue-100 py-10 my-5 space-y-5">
-     <div className="max-w-11/12 mx-auto">
+    <div className="container mx-auto py-10 my-5 space-y-5">
+     
        <p>Freedom on your wheels</p>
       <div className="space-y-10">
         <div className="text-4xl md:text-6xl font-semibold">
@@ -28,7 +28,7 @@ const Banner = () => {
         </Link>
       </div>
      </div>
-    </div>
+  
   );
 };
 
