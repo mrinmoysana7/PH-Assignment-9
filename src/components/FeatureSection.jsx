@@ -3,7 +3,7 @@
 import { ArrowRight, Gauge, Home } from "lucide-react";
 const FeatureSection = () => {
   return (
-    <section className="w-full py-6 sm:py-10">
+    <section className="w-full py-6 sm:py-10 px-5 md:px-0">
       <div className="mx-auto container">
         <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:grid-rows-2 md:h-140">
           {/* TOP LEFT CARD */}

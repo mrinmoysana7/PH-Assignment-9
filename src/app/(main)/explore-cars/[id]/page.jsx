@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button } from "@heroui/react";
+
 import {
   Fuel,
   Users,
@@ -11,6 +11,7 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 import Link from "next/link";
+import BookingModal from "@/components/BookingModal";
 
 const CarDetailsPage = async ({ params }) => {
   const { id } = await params;
@@ -157,13 +158,7 @@ const CarDetailsPage = async ({ params }) => {
               </div>
 
               {/* BUTTON */}
-              <Button
-                radius="lg"
-                className="w-full h-14 mt-8 bg-black text-white text-lg font-semibold hover:bg-[#15A1BF] transition-all duration-300"
-              >
-                Book Now
-                <ArrowUpRight size={20} />
-              </Button>
+              <BookingModal car={car}></BookingModal>
 
               {/* BENEFITS */}
               <div className="grid grid-cols-2 gap-4 mt-8">

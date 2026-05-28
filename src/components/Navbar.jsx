@@ -1,5 +1,5 @@
 "use client";
-
+import { useEffect, useState } from "react";
 import { authClient, signOut } from "@/lib/auth-client";
 import { Car } from "@gravity-ui/icons";
 import { Avatar, Button } from "@heroui/react";
@@ -9,6 +9,11 @@ import { useRouter } from "next/navigation";
 import toast, { Toaster } from "react-hot-toast";
 
 const Navbar = () => {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   const router = useRouter();
   const { data, isPending } = authClient.useSession();
 
@@ -30,8 +35,15 @@ const Navbar = () => {
     }
   };
 
+  if (!mounted) {
+    return null;
+  }
+
   return (
-    <nav className="navbar flex justify-between items-center md:px-10 backdrop-blur-xl top-0 z-50 sticky bg-transparent">
+    <nav
+      className="navbar flex justify-between items-center fixed md:px-10 backdrop-blur-xl top-0 left-0 w-full z-50 bg-tranparent 
+    border-b border-white/10"
+    >
       <Toaster />
       <div className="Left flex items-center">
         <div className="dropdown">

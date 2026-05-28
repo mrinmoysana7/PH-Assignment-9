@@ -19,5 +19,7 @@ export const config = {
     "/add-car",
     "/my-profile",
     "/dashboard",
+    "/explore-cars/:path",
+    "/my-bookings"
   ],
 };
