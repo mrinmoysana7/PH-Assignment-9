@@ -13,7 +13,8 @@ import {
   TextField,
   Checkbox,
 } from "@heroui/react";
-import { redirect } from "next/navigation";
+
+import { toast, Toaster } from "react-hot-toast";
 
 const AddCarPage = () => {
   const onSubmit = async (e) => {
@@ -30,12 +31,15 @@ const AddCarPage = () => {
       body: JSON.stringify(rentalCar),
     });
     const data = await res.json();
-    redirect("/add-car");
+    
+    toast.success("Car added successfully");
+    window.location.reload();
     console.log(data);
   };
   return (
-    <div className=" bg-[#F7F5F2] px-5 py-5 md:py-20">
-      <section className="container mx-auto ">
+    <div className="min-h-screen bg-[#F7F5F2] px-5 py-5 md:py-10">
+      <Toaster></Toaster>
+      <section className="">
         <div className="">
           {/* TOP SECTION */}
           <div className="text-center mb-10">
@@ -54,20 +58,19 @@ const AddCarPage = () => {
           </div>
 
           {/* FORM CONTAINER */}
-          <div className="bg-white rounded-[40px] shadow-2xl border border-gray-200 overflow-hidden">
+          <div className="bg-white max-w-6xl mx-auto rounded-[40px] shadow-2xl border border-gray-200 overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-5">
               {/* LEFT SIDE */}
 
               <div
-                className={` lg:col-span-2
+                className={`hidden md:flex lg:col-span-2
                  relative
                  overflow-hidden
                  p-10
                  text-white
-                 flex
                  flex-col
                  justify-between
-                 min-h-175
+                 min-h-150
                  bg-cover
                  bg-center`}
                 style={{
@@ -109,7 +112,7 @@ const AddCarPage = () => {
                 </div>
 
                 <Form onSubmit={onSubmit} className="space-y-8">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
+                  <div className="grid  grid-cols-1 md:grid-cols-2 gap-8 w-full">
                     {/* CAR NAME */}
                     <div className="md:col-span-2">
                       <TextField name="carName" isRequired>
