@@ -47,11 +47,11 @@ const UpdateCarModal = ({ car }) => {
           <Modal.Container placement="auto">
             <Modal.Dialog className="sm:max-w-md">
               <Modal.CloseTrigger />
-              <Modal.Header>
-                <Modal.Heading className="text-4xl font-black text-[#111111]">
+              <Modal.Header className="text-center">
+                <Modal.Heading className="text-2xl md:text-4xl font-black text-[#111111]">
                   Update Car Details
                 </Modal.Heading>
-                <p className="text-gray-500 mt-4 leading-relaxed">
+                <p className="text-gray-500 md:mt-4 leading-relaxed">
                   Update your luxury vehicle information below.
                 </p>
               </Modal.Header>

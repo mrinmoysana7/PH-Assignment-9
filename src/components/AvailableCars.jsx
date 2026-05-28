@@ -11,7 +11,7 @@ const AvailableCars = async () => {
   const cars = await res.json();
 
   return (
-    <section className="py-20 bg-linear-to-b from-white to-gray-50">
+    <section className="py-20 bg-linear-to-b">
       <div className="container mx-auto">
         {/* TOP CONTENT */}
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
@@ -37,7 +37,7 @@ const AvailableCars = async () => {
 
         {/* CARDS */}
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
-          {cars.slice(0, 8).map((car) => (
+          {cars.slice(8, 16).map((car) => (
             <AvailableCarCard key={car?._id} car={car}></AvailableCarCard>
           ))}
         </div>

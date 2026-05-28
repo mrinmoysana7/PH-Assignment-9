@@ -8,14 +8,14 @@ import Link from "next/link";
 const AvailableCarCard = ({ car }) => {
   const { image, name, seats, rating, brand, pricePerDay, _id } = car;
   return (
-    <div className="shadow-lg rounded-b-2xl">
+    <div className="shadow-lg rounded-b-2xl hover:scale-110 transition-transform duration-700">
       {/* IMAGE */}
       <div className="relative h-64  overflow-hidden">
         <Image
           src={image}
           alt={name}
           fill
-          className="object-cover rounded-t-2xl group-hover:scale-110 transition-transform duration-700"
+          className="object-cover rounded-t-2xl "
         />
 
         {/* OVERLAY */}
@@ -42,7 +42,7 @@ const AvailableCarCard = ({ car }) => {
       </div>
 
       {/* CONTENT */}
-      <div className="p-6">
+      <div className="p-6 bg-gray-100 rounded-b-2xl">
         <div className="mb-5">
           <h3 className="text-2xl font-bold text-gray-900">{name}</h3>
 

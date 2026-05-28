@@ -58,7 +58,7 @@ const AddCarPage = () => {
           </div>
 
           {/* FORM CONTAINER */}
-          <div className="bg-white max-w-6xl mx-auto rounded-[40px] shadow-2xl border border-gray-200 overflow-hidden">
+          <div className="bg-white container mx-auto rounded-[40px] shadow-2xl border border-gray-200 overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-5">
               {/* LEFT SIDE */}
 
